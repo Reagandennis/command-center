@@ -445,7 +445,7 @@
 
     <div class="map-overlay-tl">
       <div class="ov-card">
-        <div class="h">Concession · Tulu Kapi Block</div>
+        <div class="h">Concession · Gimbi Block</div>
         <div class="legend">
           <div class="row"><i class="st-active"></i> On duty / stationary</div>
           <div class="row"><i class="st-moving"></i> Moving / convoy</div>
@@ -509,25 +509,25 @@
 
 <script>
 /* =================== DATA =================== */
-const HQ = [8.5345, 34.8035];          // Tulu Kapi area, West Wollega / near Dembidolo
+const HQ = [9.1670, 35.8330];          // Gimbi town, West Wollega (Genji woreda area), Oromia
 const C  = { gold:'#d98a0b', green:'#15a35a', blue:'#2f7fd1', amber:'#cf8412', red:'#e23744', off:'#8b96a7' };
 const statusColor = { active:C.green, moving:C.blue, idle:C.amber, due:C.gold, sos:C.red, off:C.off };
 const statusLabel = { active:'On Duty', moving:'In Field', idle:'At Camp', due:'Check-in Due', sos:'DISTRESS', off:'Offline' };
 const avPal = ['#f5a623','#34d399','#4cc4ff','#f6b73c','#c084fc','#fb923c','#22d3ee','#a3e635'];
 
 let UNITS = [
-  { id:1,  name:'Abdi Tasgara',    role:'Site Geologist',      team:'Exploration', status:'active', pos:[8.5402,34.8088], bat:88, sig:4, spd:0,  elv:1612, since:6 },
-  { id:2,  name:'Lensa Gemechu',   role:'Survey Lead',         team:'Survey',      status:'moving', pos:[8.5318,34.8121], bat:71, sig:4, spd:5,  elv:1588, since:2 },
-  { id:3,  name:'Tariku Bekele',   role:'Convoy Escort',       team:'Security',    status:'moving', pos:[8.5602,34.7902], bat:64, sig:3, spd:38, elv:1505, since:1, trail:true },
-  { id:4,  name:'Chaltu Negeri',   role:'Field Medic',         team:'Medical',     status:'idle',   pos:[8.5349,34.8021], bat:93, sig:5, spd:0,  elv:1600, since:11 },
-  { id:5,  name:'Gadisa Wakjira',  role:'Drill Operator',      team:'Operations',  status:'active', pos:[8.5441,34.7996], bat:57, sig:4, spd:0,  elv:1631, since:4 },
-  { id:6,  name:'Boncha Diriba',   role:'Logistics Officer',   team:'Logistics',   status:'active', pos:[8.5208,34.8204], bat:80, sig:3, spd:0,  elv:1549, since:9 },
-  { id:7,  name:'Meti Hundessa',   role:'Environmental Off.',  team:'Compliance',  status:'due',    pos:[8.5151,34.7951], bat:34, sig:2, spd:0,  elv:1574, since:47 },
-  { id:8,  name:'Dawit Alemu',     role:'Transport / Driver',  team:'Logistics',   status:'moving', pos:[8.5748,34.7608], bat:62, sig:3, spd:54, elv:1490, since:1, trail:true },
-  { id:9,  name:'Ujulu Okello',    role:'Field Scout',         team:'Exploration', status:'off',    pos:[8.4905,34.8512], bat:12, sig:0, spd:0,  elv:1442, since:96 },
-  { id:10, name:'Solomon Girma',   role:'Camp Manager',        team:'Operations',  status:'active', pos:[8.5340,34.8049], bat:97, sig:5, spd:0,  elv:1601, since:3 },
-  { id:11, name:'Hawi Lemma',      role:'Comms Officer',       team:'Comms',       status:'active', pos:[8.5338,34.8032], bat:90, sig:5, spd:0,  elv:1600, since:0 },
-  { id:12, name:'Firaol Abebe',    role:'Perimeter Security',  team:'Security',    status:'active', pos:[8.5485,34.8156], bat:48, sig:3, spd:0,  elv:1622, since:7 },
+  { id:1,  name:'Abdi Tasgara',    role:'Site Geologist',      team:'Exploration', status:'active', pos:[9.1727,35.8383], bat:88, sig:4, spd:0,  elv:1612, since:6 },
+  { id:2,  name:'Lensa Gemechu',   role:'Survey Lead',         team:'Survey',      status:'moving', pos:[9.1643,35.8416], bat:71, sig:4, spd:5,  elv:1588, since:2 },
+  { id:3,  name:'Tariku Bekele',   role:'Convoy Escort',       team:'Security',    status:'moving', pos:[9.1927,35.8197], bat:64, sig:3, spd:38, elv:1505, since:1, trail:true },
+  { id:4,  name:'Chaltu Negeri',   role:'Field Medic',         team:'Medical',     status:'idle',   pos:[9.1674,35.8316], bat:93, sig:5, spd:0,  elv:1600, since:11 },
+  { id:5,  name:'Gadisa Wakjira',  role:'Drill Operator',      team:'Operations',  status:'active', pos:[9.1766,35.8291], bat:57, sig:4, spd:0,  elv:1631, since:4 },
+  { id:6,  name:'Boncha Diriba',   role:'Logistics Officer',   team:'Logistics',   status:'active', pos:[9.1533,35.8499], bat:80, sig:3, spd:0,  elv:1549, since:9 },
+  { id:7,  name:'Meti Hundessa',   role:'Environmental Off.',  team:'Compliance',  status:'due',    pos:[9.1476,35.8246], bat:34, sig:2, spd:0,  elv:1574, since:47 },
+  { id:8,  name:'Dawit Alemu',     role:'Transport / Driver',  team:'Logistics',   status:'moving', pos:[9.2073,35.7903], bat:62, sig:3, spd:54, elv:1490, since:1, trail:true },
+  { id:9,  name:'Ujulu Okello',    role:'Field Scout',         team:'Exploration', status:'off',    pos:[9.1230,35.8807], bat:12, sig:0, spd:0,  elv:1442, since:96 },
+  { id:10, name:'Solomon Girma',   role:'Camp Manager',        team:'Operations',  status:'active', pos:[9.1665,35.8344], bat:97, sig:5, spd:0,  elv:1601, since:3 },
+  { id:11, name:'Hawi Lemma',      role:'Comms Officer',       team:'Comms',       status:'active', pos:[9.1663,35.8327], bat:90, sig:5, spd:0,  elv:1600, since:0 },
+  { id:12, name:'Firaol Abebe',    role:'Perimeter Security',  team:'Security',    status:'active', pos:[9.1810,35.8451], bat:48, sig:3, spd:0,  elv:1622, since:7 },
 ];
 
 const initials = n => n.split(' ').map(w=>w[0]).join('').slice(0,2).toUpperCase();
@@ -545,7 +545,7 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r
 
 // concession boundary (mining block) + restricted core
 L.polygon([
-  [8.575,34.770],[8.572,34.835],[8.540,34.852],[8.505,34.838],[8.498,34.792],[8.520,34.762],[8.555,34.758]
+  [9.2075,35.7995],[9.2045,35.8645],[9.1725,35.8815],[9.1375,35.8675],[9.1305,35.8215],[9.1525,35.7915],[9.1875,35.7875]
 ], { color:C.gold, weight:1.4, opacity:.7, fillColor:C.gold, fillOpacity:.05, dashArray:'6 5' }).addTo(map)
  .bindTooltip('TKGM CONCESSION · BLOCK 04', {className:'zone-tip', permanent:false});
 
@@ -554,7 +554,7 @@ L.circle(HQ, { radius:1400, color:C.red, weight:1, opacity:.45, fillColor:C.red,
 
 // HQ marker
 L.marker(HQ, { icon:L.divIcon({ className:'hq-icon', html:'<div class="hq"><span>HQ</span></div>', iconSize:[30,30], iconAnchor:[15,15] }), zIndexOffset:500 })
- .addTo(map).bindTooltip('TULU KAPI · BASE CAMP / DISPATCH', {direction:'top', offset:[0,-12]});
+ .addTo(map).bindTooltip('GIMBI · BASE CAMP / DISPATCH', {direction:'top', offset:[0,-12]});
 
 // convoy trail
 const trail = L.polyline([], { color:C.blue, weight:2, opacity:.5, dashArray:'1 6', lineCap:'round' }).addTo(map);
